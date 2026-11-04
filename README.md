@@ -1,5 +1,7 @@
 # Landing-Page-Artista-digital
 
+[GitHub Pages](https://adribarrera.github.io/Landing-Page-Artista-digital/)
+
 ## 1. Imagen principal
 He seleccionado el formato **WebP** para la imagen principal frente a formatos tradicionales como JPEG o PNG debido a su algoritmo de compresión, que es más eficiente. WebP permite una reducción de peso aproximada del 25 al 35% respecto a un JPEG equivalente con la misma calidad visual percibida.
 
