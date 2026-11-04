@@ -1,0 +1,134 @@
+/* ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #080d16;
+    color: #ffffff;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+/* CABECERA Y MENÚ */
+.cabecera {
+    background-color: #080d16;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #79D5DB;
+    position: sticky;
+    /* Para el navbar quede fijo al scrollear */
+    top: 0;
+    z-index: 100;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navegacion a:hover {
+    color: #79D5DB;
+}
+
+/* CONTENEDOR Y SECCIONES */
+.contenedor {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.seccion {
+    background-color: #131b2e;
+    border: 1px solid #23334d;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    scroll-margin-top: 90px;
+    /* Para que el navbar no tape el titulo de cada sección */
+}
+
+h1,
+h2 {
+    font-family: 'Science Gothic', sans-serif;
+    color: #79D5DB;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* BOTÓN Y ELEMENTOS MULTIMEDIA */
+.boton-animado {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.boton-animado img {
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.boton-animado:hover {
+    cursor: pointer;
+}
+
+.recurso {
+    margin: 15px auto;
+    max-width: 100%;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+audio {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+/* GALERÍA */
+.rejilla-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.rejilla-galeria .recurso {
+    background-color: #1a253b;
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 300px;
+}
+
+/* PIE DE PÁGINA */
+.pie {
+    background-color: #080d16;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #79D5DB;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Nébula, artista digital de ciencia ficción.">
+    <title>Nébula | Artista Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <div class="logo">
+            <img src="assets/img/logo_nebula.svg" alt="Logotipo de Nébula" width="160" height="40">
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#video">Vídeo</a></li>
+                <li><a href="#audio">Audio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+
+        <!-- INICIO -->
+        <section id="inicio" class="seccion">
+            <h1>Nébula</h1>
+            <p>Arte conceptual y paisajes de ciencia ficción.</p>
+
+            <!-- IMAGEN PRINCIPAL -->
+            <figure class="recurso">
+                <img src="assets/img/paisaje_futurista.webp" alt="Paisaje espacial futurista con estilo semitono"
+                    width="1920" height="1080">
+                <figcaption>
+                    Fotografía original por John Links en Unsplash (Licencia libre de uso comercial).
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- GALERÍA -->
+        <section id="galeria" class="seccion">
+            <h2>Galería de Trabajos</h2>
+            <div class="rejilla-galeria">
+
+                <figure class="recurso">
+                    <img src="assets/img/galeria_1.webp" alt="Obra digital Luna de Sangre" width="400" height="250"
+                        loading="lazy">
+                    <figcaption>
+                        Faro Galáctico. Arte conceptual propio.
+                    </figcaption>
+                </figure>
+
+                <figure class="recurso">
+                    <img src="assets/img/galeria_2.webp" alt="Obra digital Faro Galáctico" width="400" height="250"
+                        loading="lazy">
+                    <figcaption>
+                        Ruta de Energía. Arte conceptual propio.
+                    </figcaption>
+                </figure>
+
+                <figure class="recurso">
+                    <img src="assets/img/galeria_3.webp" alt="Obra digital Rutas de Energía" width="400" height="250"
+                        loading="lazy">
+                    <figcaption>
+                        Luna de Sangre. Arte conceptual propio.
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- VÍDEO DE PRESENTACIÓN -->
+        <section id="video" class="seccion">
+            <h2>Vídeo de Presentación</h2>
+            <figure class="recurso">
+                <video controls poster="assets/img/miniatura.webp" width="1920" height="1080">
+                    <source src="assets/video/video.mp4" type="video/mp4">
+                </video>
+                <figcaption>
+                    Vídeo espacial de Pexels (Libre uso comercial). Miniatura fija extraída con FFmpeg.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- AUDIO AMBIENTAL -->
+        <section id="audio" class="seccion">
+            <h2>Audio Ambiental</h2>
+            <figure class="recurso">
+                <audio controls preload="none">
+                    <source src="assets/audio/ambiente.mp3" type="audio/mpeg">
+                </audio>
+                <figcaption>
+                    Pista ambiental editada en FL Studio.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- BOTÓN ANIMADO -->
+        <section id="contacto" class="seccion">
+            <h2>Contacto</h2>
+            <div class="boton-animado">
+                <img src="assets/img/animacion.webp" alt="Botón animado Contacto Intergaláctico" width="400"
+                    height="150">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        <p>&copy; 2026 Nébula</p>
+    </footer>
+
+</body>
+
+</html>

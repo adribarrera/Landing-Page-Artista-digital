@@ -18,7 +18,7 @@ He diseñado el logotipo de "Nébula" y exportado en formato **SVG (Scalable Vec
 
 3. **Manipulación mediante estilos:** Permite ser controlado e interactivo mediante CSS (cambios de color en hover, transiciones) e integrarse directamente en el DOM.
 
-- **Herramienta y Tratamiento:** Vectorizado y exportado digitalmente en curvas limpias para minimizar nodos innecesarios y optimizar el tamaño del marcado SVG final.
+- **Herramienta y Tratamiento:** Diseñado en Adobe Photoshop 2025. Escribí el texto con la herramienta de texto, rastericé la capa, tracé el arco con la pluma vectorial y finalmente exporté el conjunto en formato SVG.
 
 | Recurso | Archivo | Autor | URL | Licencia |
 | ------- | ------- | ------- | ------- | ------- |
@@ -31,16 +31,16 @@ He generado y trabajado tres obras digitales de paisajes de ciencia ficción que
 
 | Recurso | Archivo resultante | Autor | URL | Licencia |
 | ------- | ------------------ | ----- | --- | --------- |
-| Galería 1 | [Luna de Sangre](assets/img/galeria_1.webp) | Adrián Barrera / IA | N/A (Generación propia) | Dominio Público / Creación propia |
-| Galería 2 | [Faro Galáctico](assets/img/galeria_2.webp) | Adrián Barrera / IA | N/A (Generación propia) | Dominio Público / Creación propia |
-| Galería 3 | [Rutas de Energía](assets/img/galeria_3.webp) | Adrián Barrera / IA | N/A (Generación propia) | Dominio Público / Creación propia |
+| Galería 1 | [Faro Galáctico](assets/img/galeria_1.webp) | Adrián Barrera / IA | N/A (Generación propia) | Dominio Público / Creación propia |
+| Galería 2 | [Rutas de Energía](assets/img/galeria_2.webp) | Adrián Barrera / IA | N/A (Generación propia) | Dominio Público / Creación propia |
+| Galería 3 | [Luna de Sangre](assets/img/galeria_3.webp) | Adrián Barrera / IA | N/A (Generación propia) | Dominio Público / Creación propia |
 
 ## 4. Animación de "Llamada a la Acción" (Call to Action)
-He diseñado una animación en bucle para el botón principal de contacto ("CONTACTO INTERGALÁCTICO"), aplicando los principios de optimización web (WPO) y manteniendo la coherencia con la identidad de "Nébula".
+He diseñado una animación en bucle para el botón principal de contacto, aplicando los principios de optimización web (WPO) y manteniendo la coherencia con la identidad de "Nébula".
 
-- **Herramienta, Tratamiento y Edición:** La composición de los fotogramas base se preparó en **Adobe Photoshop 2025** para estructurar la progresión de la iluminación. Se utilizaron 3 fotogramas clave para simular un pulso de energía de activación: el Frame 1 muestra el botón en calma, el Frame 2 inicia un sutil brillo en el texto junto con la apertura del sobre, y el Frame 3 alcanza el clímax con el sobre abierto y el resplandor a máxima potencia.
+- **Herramienta, Tratamiento y Edición:** La composición de los fotogramas base se preparó en **Adobe Photoshop 2025** para estructurar la progresión de la iluminación. Se utilizaron 3 fotogramas clave . El Frame 1 muestra el botón en calma, el Frame 2 inicia un brillo en el texto junto con la apertura del sobre, y el Frame 3 alcanza el clímax con el sobre abierto y el resplandor al máximo.
 
-- **Optimización y Montaje:** El ensamblado final del bucle y ajuste de tiempos (*delays*) se realizó mediante la herramienta especializada **Ezgif**, exportando en formato **WebP animado** a 400x150px. Esto permite conservar los degradados suaves y el patrón de semitono sin el elevado peso ni las limitaciones de color indexado del GIF tradicional. Con una calidad del 80%, el peso final se mantiene por debajo de 30 KB.
+- **Optimización y Montaje:** El ensamblado final del bucle y ajuste de delays se ha realizado mediante la herramienta  **Ezgif**, exportando en formato **WebP animado** a 400x150px. Esto permite conservar los degradados el patrón de semitonos sin el alto peso ni las limitaciones de color indexado del GIF tradicional. Con una calidad del 80%, el peso final se mantiene por debajo de 30 KB.
 
 | Recurso | Archivo resultante | Autor | URL | Licencia |
 | ------- | ------------------ | ----- | --- | --------- |
@@ -51,7 +51,7 @@ He incorporado un clip audiovisual para la cabecera/sección de presentación co
 
 - **Herramienta y Tratamiento (FFmpeg):** El procesamiento completo del clip original (1080p a 30 FPS) se realizó por línea de comandos utilizando **FFmpeg**. Se recortó a una duración de 11 segundos y se transcodificó mediante el códec **H.264 (`libx264`)** fijando un bitrate objetivo de 1600 kbps (`-b:v 1600k`), con un techo de 1900 kbps (`-maxrate 1900k`) y espacio de color estándar `yuv420p`. Se eliminó por completo la pista de audio innecesaria (`-an`) y se aplicó la bandera `-movflags +faststart` para habilitar el streaming progresivo en el navegador. El archivo final resultante pesa unos 2.2 MB.
 
-- **Imagen de Precarga (Poster):** Mediante **FFmpeg** se extrajo un fotograma clave del segundo 3 (`-ss 00:00:03`) codificándolo directamente en formato **WebP** (`-c:v libwebp -quality 80`). La imagen resultante (`miniatura.webp`) tiene un peso inferior a 60 KB y actúa como marcador de posición instantáneo para evitar pantallas negras y eliminar saltos de maquetación.
+- **Imagen de Precarga (Poster):** Mediante **FFmpeg** se extrajo un fotograma clave del segundo 3 (`-ss 00:00:03`) codificándolo directamente en formato **WebP** (`-c:v libwebp -quality 80`). La imagen resultante (`miniatura.webp`) tiene un peso inferior a 70 KB y actúa como marcador de posición instantáneo para evitar pantallas negras y eliminar saltos de maquetación.
 
 | Recurso | Archivo resultante | Autor | URL | Licencia |
 | ------- | ------------------ | ----- | --- | --------- |
