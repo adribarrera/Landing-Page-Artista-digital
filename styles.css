@@ -11,6 +11,40 @@ body {
     font-family: 'Orbitron', Arial, sans-serif;
 }
 
+
+/* LOGO SVG INLINE INTERACTIVO */
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.logo-svg {
+    display: block;
+    overflow: visible;
+}
+
+.logo-path {
+    stroke: transparent;
+    stroke-width: 18px;
+    transition: fill 0.25s ease, stroke 0.25s ease;
+}
+
+.logo-link:hover,
+.logo-link:focus-visible {
+    color: #79D5DB;
+    transform: scale(1.04);
+}
+
+.logo-link:hover .logo-path,
+.logo-link:focus-visible .logo-path {
+    stroke: #a8f4f9;
+}
+
 /* CABECERA Y MENÚ */
 .cabecera {
     background-color: #080d16;
@@ -111,6 +145,26 @@ figcaption {
 }
 
 /* GALERÍA */
+.visor-principal {
+    background-color: #1a253b;
+    border: 1px solid #23334d;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.visor-principal img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.visor-principal img.cambiando {
+    opacity: 0.25;
+    transform: scale(0.98);
+}
+
 .rejilla-galeria {
     display: flex;
     flex-wrap: wrap;
@@ -120,9 +174,31 @@ figcaption {
 
 .rejilla-galeria .recurso {
     background-color: #1a253b;
+    border: 2px solid transparent;
     border-radius: 6px;
     padding: 10px;
-    max-width: 300px;
+    max-width: 280px;
+    min-width: 44px;
+    min-height: 44px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.rejilla-galeria .recurso:hover,
+.rejilla-galeria .recurso:focus-visible {
+    transform: scale(1.04);
+    border-color: #79D5DB;
+}
+
+.rejilla-galeria .recurso.activa {
+    border-color: #79D5DB;
 }
 
 /* PIE DE PÁGINA */
