@@ -61,3 +61,50 @@ document.addEventListener('keydown', (evento) => {
         cerrarModal();
     }
 });
+
+// REPRODUCTOR DE AUDIO
+const audioEspacial = document.getElementById('audio-espacial');
+const btnAudioToggle = document.getElementById('btn-audio-toggle');
+const textoAudioToggle = document.getElementById('texto-audio-toggle');
+const btnAudioMute = document.getElementById('btn-audio-mute');
+const tiempoAudio = document.getElementById('tiempo-audio');
+
+const formatearTiempo = (segundos) => {
+    const min = Math.floor(segundos / 60).toString().padStart(2, '0');
+    const seg = Math.floor(segundos % 60).toString().padStart(2, '0');
+    return `${min}:${seg}`;
+};
+
+audioEspacial.addEventListener('loadedmetadata', () => {
+    tiempoAudio.textContent = `00:00 / ${formatearTiempo(audioEspacial.duration)}`;
+});
+
+audioEspacial.addEventListener('timeupdate', () => {
+    const duracion = isNaN(audioEspacial.duration) ? 15 : audioEspacial.duration;
+    tiempoAudio.textContent = `${formatearTiempo(audioEspacial.currentTime)} / ${formatearTiempo(duracion)}`;
+});
+
+btnAudioToggle.addEventListener('click', () => {
+    if (audioEspacial.paused) {
+        audioEspacial.play()
+            .then(() => {
+                btnAudioToggle.classList.add('reproduciendo');
+                btnAudioToggle.setAttribute('aria-pressed', 'true');
+                textoAudioToggle.textContent = 'Pausar ambiente espacial';
+            })
+            .catch((error) => {
+                console.error('Error al reproducir el audio ambiental:', error);
+            });
+    } else {
+        audioEspacial.pause();
+        btnAudioToggle.classList.remove('reproduciendo');
+        btnAudioToggle.setAttribute('aria-pressed', 'false');
+        textoAudioToggle.textContent = 'Escuchar ambiente espacial';
+    }
+});
+
+btnAudioMute.addEventListener('click', () => {
+    audioEspacial.muted = !audioEspacial.muted;
+    btnAudioMute.setAttribute('aria-pressed', String(audioEspacial.muted));
+    btnAudioMute.textContent = audioEspacial.muted ? 'Activar sonido' : 'Silenciar';
+});

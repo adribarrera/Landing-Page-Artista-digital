@@ -296,3 +296,117 @@ figcaption {
     margin-bottom: 0;
     text-align: center;
 }
+
+/* REPRODUCTOR DE AUDIO PERSONALIZADO */
+.controles-audio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-impacto.reproduciendo {
+    background-color: transparent;
+    color: #79D5DB;
+}
+
+.btn-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 48px;
+    padding: 12px 20px;
+    background-color: #1a253b;
+    color: #ffffff;
+    border: 2px solid #23334d;
+    border-radius: 6px;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-secundario:hover,
+.btn-secundario:focus-visible {
+    border-color: #79D5DB;
+    color: #79D5DB;
+    transform: scale(1.04);
+}
+
+.indicador-tiempo {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 14px;
+    background-color: #1a253b;
+    border: 1px solid #23334d;
+    border-radius: 6px;
+    color: #79D5DB;
+    font-size: 0.85rem;
+}
+
+/* FEEDBACK VISUAL EN NAVEGACIÓN Y BOTÓN CTA */
+.navegacion a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.navegacion a:hover,
+.navegacion a:focus-visible {
+    color: #79D5DB;
+    transform: translateY(-2px);
+}
+
+.boton-animado img {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.boton-animado:hover img,
+.boton-animado:focus-visible img {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* CRÉDITOS Y LICENCIA EN FOOTER */
+.tabla-responsive {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.tabla-creditos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.tabla-creditos th,
+.tabla-creditos td {
+    padding: 12px;
+    border-bottom: 1px solid #23334d;
+}
+
+.tabla-creditos th {
+    background-color: #1a253b;
+    color: #79D5DB;
+}
+
+.tabla-creditos a,
+.licencia-footer a {
+    color: #79D5DB;
+    display: inline-block;
+    padding: 8px 4px;
+}
+
+.licencia-footer {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}

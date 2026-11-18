@@ -70,3 +70,40 @@ Se ha incorporado una pista de sonido ambiental de ciencia ficción para ambient
 | Recurso | Archivo resultante | Autor | URL | Licencia |
 | ------- | ------------------ | ----- | --- | --------- |
 | Sonido Ambiental | [Sonido Ambiente](assets/audio/ambiente.mp3) | julian 10x | https://www.youtube.com/watch?v=VLpkYuOmpSU | Licencia estándar de YouTube (Uso con fines exclusivamente académicos) |
+
+## 7. Evolución Interactiva
+
+### Integración de SVG Inline
+Se ha sustituido la etiqueta `<img>` del logotipo por código `<svg>` inline directamente en el DOM (`index.html` y `credits.html`).
+
+- **Ventajas:** Evita una petición HTTP adicional en la carga inicial, permite modificar propiedades vectoriales (`fill` y `stroke`) mediante CSS en `:hover` y `:focus-visible` manteniendo nitidez vectorial a cualquier resolución, y mejora la accesibilidad semántica mediante `<title>` y `aria-labelledby`.
+
+### Interactividad con Vanilla JS y API `HTMLMediaElement`
+- **Galería Dinámica:** Controlada mediante JavaScript puro (`main.js`) con atributos `data-*`, actualizando suavemente la imagen principal, su `alt` y su pie de foto (`<figcaption>`).
+
+- **Modal de Vídeo:** Ventana modal accesible (`role="dialog"`, `aria-modal="true"`) vinculada a `.play()` al abrirse y `.pause()` al cerrarse (por botón, clic externo o tecla `Escape`).
+
+- **Reproductor de Audio Personalizado:** Ocultación de los controles nativos para gestionar reproducción, pausa, silencio y contador temporal mediante `.play()`, `.pause()`, `.paused`, `.muted`, `.currentTime`, `.duration` y el evento `loadedmetadata`.
+
+## 8. Propiedad Intelectual, Licencias y Obra Derivada
+
+### Licencia del Proyecto
+El proyecto **Nébula** se publica bajo licencia **Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**, enlazada en el pie de página junto con el archivo [`credits.html`](credits.html).
+- **Compatibilidad:** Los recursos externos proceden de bancos con licencias permisivas (Unsplash y Pexels) compatibles con la distribución educativa/no comercial, y la pista sonora se utiliza exclusivamente con fines académicos.
+
+### Escenario Hipotético: ¿Qué ocurriría si un recurso integrado fuera CC BY-SA?
+Si un recurso externo utilizado estuviera bajo licencia **CC BY-SA (Atribución-CompartirIgual)**:
+1. **Obligación de CompartirIgual (Copyleft):** Al integrarlo y generar una obra derivada o compuesta, la cláusula `SA` obligaría a licenciar el proyecto resultante bajo la **misma licencia CC BY-SA** (o compatible).
+
+2. **Prohibición de restricciones adicionales:** No se podría publicar bajo una licencia más restrictiva (como *Todos los derechos reservados* o *CC BY-NC-ND*) ni bloquear el uso comercial si el recurso original era `CC BY-SA` sin `NC`.
+
+3. **Atribución:** Habría que mantener el crédito al autor original, enlazar la licencia CC BY-SA e indicar las modificaciones efectuadas.
+
+## 9. Verificación Cross-Browser y Multi-Dispositivo
+Se ha verificado el funcionamiento de la galería, el modal de vídeo, el audio personalizado y el diseño adaptable mediante **DevTools (F12)** en los siguientes navegadores y resoluciones:
+
+| Navegador / Entorno | Galería JS | Modal Vídeo | Audio JS | Controles Táctiles ($\ge 44\times44\text{px}$) | Resultado |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Google Chrome (Desktop y DevTools Móvil 375px)** | OK | OK | OK | Verificado (`min-height: 44px/48px`) | Correcto |
+| **Mozilla Firefox (Desktop y Vista Responsive 768px)** | OK | OK | OK | Verificado (`min-height: 44px/48px`) | Correcto |
+| **Microsoft Edge (Desktop y Emulación Tablet)** | OK | OK | OK | Verificado (`min-height: 44px/48px`) | Correcto |
