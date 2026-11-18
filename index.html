@@ -49,7 +49,7 @@
                 <img src="assets/img/paisaje_futurista.webp" alt="Paisaje espacial futurista con estilo semitono"
                     width="1920" height="1080">
                 <figcaption>
-                    Fotografía original por John Links en Unsplash (Licencia libre de uso comercial).
+                    Fotografía original por John Links en Unsplash.
                 </figcaption>
             </figure>
         </section>
@@ -94,14 +94,10 @@
         <!-- VÍDEO DE PRESENTACIÓN -->
         <section id="video" class="seccion">
             <h2>Vídeo de Presentación</h2>
-            <figure class="recurso">
-                <video controls poster="assets/img/miniatura.webp" width="1920" height="1080">
-                    <source src="assets/video/video.mp4" type="video/mp4">
-                </video>
-                <figcaption>
-                    Vídeo espacial de Pexels (Libre uso comercial). Miniatura fija extraída con FFmpeg.
-                </figcaption>
-            </figure>
+            <p>Explora el timelapse espacial inmersivo diseñado por Nébula.</p>
+            <button type="button" id="btn-abrir-modal" class="btn-impacto">
+                Ver Vídeo
+            </button>
         </section>
 
         <!-- AUDIO AMBIENTAL -->
@@ -133,6 +129,23 @@
         <p>&copy; 2026 Nébula</p>
     </footer>
 
+    <!-- MODAL DE VÍDEO -->
+    <div id="modal-video" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+        <div class="modal-contenido">
+            <div class="modal-cabecera">
+                <h3 id="modal-titulo">Reel de Animación Nébula</h3>
+                <button type="button" id="btn-cerrar-modal" class="btn-cerrar" aria-label="Cerrar ventana de vídeo">
+                    &times;
+                </button>
+            </div>
+            <video id="video-reel" controls playsinline poster="assets/img/miniatura.webp" width="1920" height="1080">
+                <source src="assets/video/video.mp4" type="video/mp4">
+            </video>
+            <p class="modal-pie">
+                Vídeo espacial de Pexels.
+            </p>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 

@@ -208,3 +208,91 @@ figcaption {
     padding: 20px;
     border-top: 2px solid #79D5DB;
 }
+
+/* BOTÓN DE IMPACTO Y MODAL DE VÍDEO */
+.btn-impacto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 48px;
+    padding: 12px 24px;
+    background-color: #79D5DB;
+    color: #080d16;
+    border: 2px solid #79D5DB;
+    border-radius: 6px;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-impacto:hover,
+.btn-impacto:focus-visible {
+    background-color: #a8f4f9;
+    border-color: #a8f4f9;
+    transform: scale(1.04);
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(8, 13, 22, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-overlay[hidden] {
+    display: none;
+}
+
+.modal-contenido {
+    background-color: #131b2e;
+    border: 2px solid #79D5DB;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 850px;
+    padding: 20px;
+}
+
+.modal-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-cabecera h3 {
+    color: #79D5DB;
+    margin: 0;
+}
+
+.btn-cerrar {
+    background-color: #1a253b;
+    color: #ffffff;
+    border: 1px solid #23334d;
+    border-radius: 6px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-cerrar:hover,
+.btn-cerrar:focus-visible {
+    background-color: #79D5DB;
+    color: #080d16;
+    transform: scale(1.05);
+}
+
+.modal-pie {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
