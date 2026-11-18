@@ -112,22 +112,21 @@
             <!-- Sin atributo controls para ocultar la barra nativa y manejarlo desde JS con HTMLMediaElement -->
             <!-- preload="metadata" para que cargue la duración total al entrar sin descargar el mp3 entero -->
             <audio id="audio-espacial" preload="metadata" loop>
-                <audio id="audio-espacial" preload="metadata" loop>
-                    <source src="assets/audio/ambiente.mp3" type="audio/mpeg">
-                </audio>
+                <source src="assets/audio/ambiente.mp3" type="audio/mpeg">
+            </audio>
 
-                <div class="controles-audio">
-                    <button type="button" id="btn-audio-toggle" class="btn-impacto" aria-pressed="false">
-                        <span id="texto-audio-toggle">Escuchar ambiente espacial</span>
-                    </button>
+            <div class="controles-audio">
+                <button type="button" id="btn-audio-toggle" class="btn-impacto" aria-pressed="false">
+                    <span id="texto-audio-toggle">Escuchar ambiente espacial</span>
+                </button>
 
-                    <button type="button" id="btn-audio-mute" class="btn-secundario" aria-pressed="false">
-                        Silenciar
-                    </button>
+                <button type="button" id="btn-audio-mute" class="btn-secundario" aria-pressed="false">
+                    Silenciar
+                </button>
 
-                    <!-- aria-live="polite" para que los lectores de pantalla avisen del cambio de tiempo sin interrumpir -->
-                    <span id="tiempo-audio" class="indicador-tiempo" aria-live="polite">00:00 / 00:15</span>
-                </div>
+                <!-- aria-live="polite" para que los lectores de pantalla avisen del cambio de tiempo sin interrumpir -->
+                <span id="tiempo-audio" class="indicador-tiempo" aria-live="polite">00:00 / 00:15</span>
+            </div>
         </section>
 
         <!-- BOTÓN ANIMADO -->
